@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Style4.css">
+</head>
+<body>
+
+<ul align="right">
+		<li><a href="Inicio.html"> Inicio</a></li>
+		<li><a href="Products.html">Productos</a></li>
+		<li><a href="Contactanos.html" class="active"> Contactanos</a>			</li>		</ul>
+		
+
+		<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+ 
+<h1>		
+	Información:
+</h1>
+		<h3>
+			Tel. 2902 1954 - 2902 6134
+	Mail. info@siouxjeans.com
+		</h3>
+<hr>
+
+<h1> Buscanos en tus redes sociales...
+	<h3 align="left">Facebook: <a href="https://es-la.facebook.com/siouxjeans/">@Siouxjeans</a></h3>
+<h3 align="left">Instagram: <a href="https://www.instagram.com/siouxjeans/?hl=en">@Siouxjeans</a></h3>
+<h3 align="left">Tiktok: <a href="https://www.tiktok.com/@siouxjeans?lang=en">@Siouxjeans</a></h3>
+
+</h1>
+
+<hr>
+
+<h1>		
+	Dejanos tu mensaje:
+</h1>
+<div class="comment" align="center">
+<textarea id="title" type="text "rows="20" cols="40" onkeyup="Allow()" placeholder="Comentarios..."></textarea >
+<input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+</div>
+<div id="display"></div>
+<script type="text/javascript">
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+function Allow()
+{
+if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+{
+user.title.value="";
+alert("Please Enter only alphabets");
+}
+window.location.reload()
+}
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+function clearAndShow ()
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+}
+</script>
+<hr>
+<h1>		
+	Ubicación:
+</h1>
+<h3>
+	Convencion 1136 | Montevideo, Uruguay.
+Desarrollado por estasONLINE	
+</h3>
+
+
+<hr>
+
+<h1>		
+	Sobre Sioux:
+</h1>
+<h3>
+	Sioux Jeans Uruguay incia su actividad en nuestro país en la segunda mitad del año 2003, apuntando a la formación de una red de distribución para sus productos canalizada exclusivamente a través de distribuidores exclusivos autorizados para cada zona del territorio nacional.
+Hoy estamos presentes en 18 departamentos con más de 100 distribuidores autorizados donde se exhiben y se comercializan nuestra extensa linea de productos compuestos por jeans, t-shirts, accesorios, etc. Éstos son desarrollados y permanentemente actualizados por nuestro departamento de diseño atento a las tendencias internacionales, utilizando siempre materias primas de altísima calidad y bajo los más exigentes estándares internacionales de fabricación.
+
+Frente a cualquier consulta referida a productos o locales autorizados contáctese con nuestro departamento comercial.
+		
+</h3>
+
+		<hr>
+
+</div>
+<style>
+.alert {
+  opacity: 1;
+  transition: opacity 0.6s; /* 600ms to fade out */
+}
+
+.comment{
+	margin-top: 200px;
+}
+
+			
+
+</body>
+</html>

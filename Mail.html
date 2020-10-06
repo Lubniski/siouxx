@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+
+<ul align="right">
+		<li><a href="Inicio.html"> Inicio</a></li>
+		<li><a href="Products.html">Productos</a></li>
+		<li><a href="Contactanos.html" class="active"> Contactanos</a>
+		</li>
+			
+	</ul>
+
+
+<div class="callout">
+  <div class="callout-header">Callout Header</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div class="callout-container">
+    <p>Some text...</p>
+  </div>
+</div>
+
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+ <ul>
+			<li><a href="Number.html">Contacto</a></li>
+			<li><a href="Mail.html" class="active">Dejanos tu mensaje</a></li>
+			<li><a href="Location.html">Location</a></li>
+		</ul>
+
+</div>
+<div class="comment" align="center">
+<textarea id="title" type="text "rows="20" cols="40" onkeyup="Allow()" placeholder="Dejanos tu mensaje......"></textarea >
+<input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+</div>
+<div id="display"></div>
+<script type="text/javascript">
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+function Allow()
+{
+if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+{
+user.title.value="";
+alert("Please Enter only alphabets");
+}
+window.location.reload()
+}
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+function clearAndShow ()
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+}
+</script>
+<style>
+.alert {
+  opacity: 1;
+  transition: opacity 0.6s; /* 600ms to fade out */
+}
+.comment{
+	margin-top: 200px;
+}
+
+
+</body>
+</html>
